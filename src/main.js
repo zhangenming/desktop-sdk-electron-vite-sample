@@ -62,7 +62,7 @@ function showWindow() {
 }
 
 async function createDesktopSdkUpload() {
-  const url = `${process.env.RECALLAI_API_URL}/api/v1/sdk-upload/`;
+  const url = `${process.env.RECALLAI_API_URL}/api/v1/sdk_upload/`;
 
   const response = await axios.post(url, {}, {
     headers: { 'Authorization': `Token ${process.env.RECALLAI_API_KEY}` },
@@ -258,7 +258,7 @@ app.on('ready', () => {
   });
 
   RecallAiSdk.init({
-    api_url: process.env.RECALLAI_API_URL,
+    apiUrl: process.env.RECALLAI_API_URL,
     acquirePermissionsOnStartup: ["microphone", "accessibility", "screen-capture"],
     config: {}
   });
